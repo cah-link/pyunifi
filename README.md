@@ -174,6 +174,11 @@ Set client alias. Use "" to reset to the default.
   - mac: The target MAC: aa:bb:cc:dd:ee:ff
   - alias: The alias to set
 
+### `update_x_passphrase(self, wlan_id, x_passphrase)`
+updates the Password of the given WLAN
+  - `wlan_id`       -- the WLANs ID
+  - `x_passphrase`  -- the new Password to set
+
 Utilities
 ---------
 

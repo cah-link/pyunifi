@@ -465,6 +465,17 @@ class Controller(object):
             res.extend(self._api_write('set/setting/' + sect, setting))
         return res
 
+    def update_x_passphrase(self, wlan_id, x_passphrase):
+        """
+        Update WLAN password
+
+        :param wlan_id: WLAN ID of the WLAN the password should be changed
+        :param x_passphrase: The new password
+        :return: the updated wlan_conf
+        """
+        res = self._api_update("rest/wlanconf/" + wlan_id, {"x_passphrase": x_passphrase})
+        return res
+
     def update_user_group(self, group_id, down_kbps=-1, up_kbps=-1):
         """
         Update user group bandwidth settings
