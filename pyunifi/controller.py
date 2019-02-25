@@ -473,7 +473,8 @@ class Controller(object):
         :param x_passphrase: The new password
         :return: the updated wlan_conf
         """
-        res = self._api_update("rest/wlanconf/" + wlan_id, {"x_passphrase": x_passphrase})
+        res = self._api_update("rest/wlanconf/" + wlan_id,
+                               {"x_passphrase": x_passphrase})
         return res
 
     def update_user_group(self, group_id, down_kbps=-1, up_kbps=-1):
